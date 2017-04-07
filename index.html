@@ -13,35 +13,123 @@
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 	<script src="app.js" type="text/javascript"></script>
 </head>
-<body>
+<body onload="speechIntro(),generateString()">
+	<div class="highlight glitch" data-text="EPLIHPOEHT">ELIHPOEHT</div> 
+	<h1 class="highlight">sounds snippets - Out december 2017</h1>
+	<div class="highlight">
 
-	<div class="example">
-		<div class="kal_main">
 
-			<div class="kal_cont">
+		<div class="example">
+			<div class="kal_main">
 
-				<div class="ks s1"><div class="ksc"></div></div>
-				<div class="ks s2"><div class="ksc"></div></div>
-				<div class="ks s3"><div class="ksc"></div></div>
-				<div class="ks s4"><div class="ksc"></div></div>
-				<div class="ks s5"><div class="ksc"></div></div>
-				<div class="ks s6"><div class="ksc"></div></div>
-				<div class="ks s7"><div class="ksc"></div></div>
-				<div class="ks s8"><div class="ksc"></div></div>
-				<div class="ks s9"><div class="ksc"></div></div>
-				<div class="ks s10"><div class="ksc"></div></div>
-				<div class="ks s11"><div class="ksc"></div></div>
-				<div class="ks s12"><div class="ksc"></div></div>
+				<div class="kal_cont">
+
+					<div class="ks s1"><div class="ksc"></div></div>
+					<div class="ks s2"><div class="ksc"></div></div>
+					<div class="ks s3"><div class="ksc"></div></div>
+					<div class="ks s4"><div class="ksc"></div></div>
+					<div class="ks s5"><div class="ksc"></div></div>
+					<div class="ks s6"><div class="ksc"></div></div>
+					<div class="ks s7"><div class="ksc"></div></div>
+					<div class="ks s8"><div class="ksc"></div></div>
+					<div class="ks s9"><div class="ksc"></div></div>
+					<div class="ks s10"><div class="ksc"></div></div>
+					<div class="ks s11"><div class="ksc"></div></div>
+					<div class="ks s12"><div class="ksc"></div></div>
+				</div>
+
 			</div>
 
-		</div>
 
-		<div class="highlight">
-			<h1>Elihpoeht </h1>
-			<h3>musical and web experiment</h3>
-		<button>enter</button>
-		</div>
+
+		<!-- <input  id="intro" type='button' value='🔊 Play' />
+		<input  onclick="hello ()2" type='button' value='🔊 Play' />
 		
-	</div>
+	-->
+	<input  id="play2" type='button' value='🔊 Play' />		
+	<audio id="play" width="100%" src="mix-demo-lucas-preview-2017.mp3">
+	</audio>
+	<h1 id="intro" class="highlight"></h1>
+	
+
+
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<script type="text/javascript">
+
+	document.addEventListener("load", speechIntro); 
+	function speechIntro () {
+		var x = "Dirdam project est un EP de musique électronique. alliant la douceur de la house, l'energie de la bass musique et une pointe d'electro pour faire vivre une éxpérience musciale universel et éclectique. Cette page vous propose de vous plonger dans l'univers d'Elihpoeht Aka Magentax compositeur de musique électronique depuis 10 ans"
+		responsiveVoice.speak(x, "French Female", {pitch: -3});
+
+		document.getElementById("play").play();
+		document.getElementById("intro").innerHTML = "good listening, live with synth, rock guitare and french poetry is coming soon";	
+
+
+	}
+
+	var aud = document.getElementById("play");
+	aud.onended = function() {
+	// document.addEventListener("click", endSpeech(){};
+
+	// 	function endSpeech() {
+			var y ="Dirdam project est un EP de musique électronique. Alliant la douceur de la house, l'énergie de la bass musique et une pointe d'électro pour faire vivre une expérience musicale universel et éclectique. Cette page vous propose de vous plonger dans l'univers d'Elihpoeht Aka Magentax compositeur de musique électronique depuis 10 ansMon Coeur s'égare et vous crie entendez ma voix je vous prie elle hurle, elle parle de la vie Tendez cette oreille mon amie J'ai besoin de votre regard sur ces braises gelé qui me guide dans le noir. Je vis à travers votre légèreté. Je suis fou, fou, fou de vous fou-fou-fou. Mais debout. Perdue dans cet amour, mon chemin pour toujours. Grâce à vous, je suis-nous. Mon corp s'efface et te prie de me perdre dans l'oublie De disparaitre pour te retrouver J'aime à nouveau te rencontrer. Quel est cet opaque destin ? Que vous éclaircissez de votre main ? L'avenir est-il à nous ? Où serais-je tout simplement fou ? je suis fou- fou- fou- de vous. fou- fou- fou- mais debout. Perdue dans cet amour. Mon chemin pour toujours. Grace à vous, je suis-nous. Je me souviens, vous dormiez et ma lanterne était alors allumée. Elle dessinait des formes sur votre visage. Du livre de l'amour, nous tournions les pages Jamais ! L  'obscurité ne vous a caché ! Mon âme flirt avec la raison et c'est l'amour qui est sans pardon. Il me perd car je dois éternellement vous retrouvez" 
+			responsiveVoice.speak(y, "French Female", {pitch: -3});
+
+    //play the mix read the speech and thank the visitor  
+
+
+};
+
+
+</script>
+
+<script type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="domanimator.js"></script>
+<script>
+	var domAnimator = new DomAnimator();
+	domAnimator.addFrame(['0_0', ' | ', ' | ']);
+	domAnimator.addFrame(['0_-', ' | ', ' | ']);
+	domAnimator.animate();
+</script>
+
+<script type="text/javascript">
+	
+
+	function generateString() {
+		var text = "";
+		var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+		for( var i=0; i < 20; i++ ) {
+			text += possible.charAt(Math.floor(Math.random() * possible.length));
+		}
+
+		parent.location.hash = text;
+
+		
+	}
+	var myVar = setInterval( generateString, 100);
+
+
+	function myStopFunction() {
+
+
+		clearInterval(myVar);
+		document.getElementById("foo").innerHTML= "Quadrivium"
+	}
+
+
+	/* Open when someone clicks on the span element */
+	function openNav() {
+		document.getElementById("myNav").style.width = "100%";
+	}
+
+	/* Close when someone clicks on the "x" symbol inside the overlay */
+	function closeNav() {
+		document.getElementById("myNav").style.width = "0%";
+	}
+</script>
+
+</div>
 </body>
 </html>
